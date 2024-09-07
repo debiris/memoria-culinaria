@@ -1,6 +1,6 @@
 # 🥘 Memória Culinária
 
-Bem-vindo ao **Memória Culinária**! Um jogo de memória que não só testa suas habilidades cognitivas, mas também te garante receber deliciosas receitas. 🍲🎉
+Bem-vindo ao **Memória Culinária**! Um jogo da memória que não só testa suas habilidades cognitivas, mas também te garante receber deliciosas receitas. 🍲🎉
 
 ## 🕹️ O Jogo
 

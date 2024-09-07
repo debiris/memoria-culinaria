@@ -1,0 +1,210 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #F5E7BD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Container principal */
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
+    flex: 1; 
+}
+
+/* Header */
+.site-header {
+    width: 100%;
+    background-color: #FF8C42;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Nerko One', cursive;
+    color: white;
+    box-sizing: border-box;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    background-color: #FF8C42;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Nerko One', cursive; 
+    color: white;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px; 
+}
+
+.footer-logos img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: white; 
+}
+
+/* Estilo do Jogo */
+.game-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-image: url('images/logo-jogo.png'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid #FF8C42; 
+    transition: transform 0.3s, border 0.3s;
+}
+
+.card.selected {
+    border: 3px solid #007BFF;
+}
+
+.card.revealed {
+    background-image: url('images/logo-jogo.png');
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.card.revealed img {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #FF8C42;
+}
+
+#new-game, #show-recipe {
+    margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets e telas pequenas (mínimo 600px) */
+@media (min-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(4, 120px);
+        grid-gap: 20px;
+    }
+
+    .card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .site-header h1 {
+        font-size: 40px;
+    }
+
+    .site-footer p {
+        font-size: 16px;
+    }
+}
+
+/* Telas grandes e desktops (mínimo 992px) */
+@media (min-width: 992px) {
+    #game-board {
+        grid-template-columns: repeat(4, 150px);
+        grid-gap: 25px;
+    }
+
+    .card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .site-header h1 {
+        font-size: 48px;
+    }
+
+    .site-footer p {
+        font-size: 18px;
+    }
+}
+
+/* Telas muito pequenas e dispositivos móveis (máximo 599px) */
+@media (max-width: 599px) {
+    .site-header h1 {
+        font-size: 28px;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(2, 100px);
+        grid-gap: 10px;
+    }
+
+    .card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .site-footer p {
+        font-size: 12px;
+    }
+}
